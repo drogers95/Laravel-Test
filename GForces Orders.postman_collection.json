@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "011f59bf-a0d3-4094-b41e-1480f6fc3b46",
+		"name": "GForces Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/orders?manufacturer=Honda&model=Civic&total_price=5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "manufacturer",
+							"value": "Honda"
+						},
+						{
+							"key": "model",
+							"value": "Civic"
+						},
+						{
+							"key": "total_price",
+							"value": "5000"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/orders/1e58b024-6208-44e5-b18f-43e272d60ea3?total_price=3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"1e58b024-6208-44e5-b18f-43e272d60ea3"
+					],
+					"query": [
+                        {
+							"key": "total_price",
+							"value": "3000"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/orders/1e58b024-6208-44e5-b18f-43e272d60ea3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"1e58b024-6208-44e5-b18f-43e272d60ea3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
